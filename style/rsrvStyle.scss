@@ -1,0 +1,147 @@
+$mainColor: #FFD700;
+$secondColor: #212121;
+$white: #fbfbfb;
+$fontFam: 'Comfortaa', cursive;
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    #headerLabel{
+        width: 80%;
+        border-bottom: 2px solid rgba($color: $secondColor, $alpha: 0.4);
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0;
+        align-items: center;
+        
+        span{
+            width: 26%;
+            margin: 15px 25px;
+            text-align: center;
+        }
+        #hLabel{
+            width: 20%;
+        }
+    }
+   
+    .ticketList{
+        width: 80%;
+        .card{
+            width: 100%;
+            .rsrvCard{
+                width: 100%;
+                height: 100px;
+                background-color: white;
+                border-radius: 0.5rem;
+                margin: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.015);
+                    transition: ease-in-out 0.2s;
+                    animation-name: shadowPulse;
+                    animation-duration: 0.6s;
+                    animation-timing-function: ease-in;
+                    //box-shadow: 0 0 5px 0px rgba($color: $secondColor, $alpha: 0.4);
+                }
+                div{
+                    height: 100%;
+                    margin: 0 2rem;
+                }
+                .hContainer{
+                    height: 85%;
+                    width: 20%;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        left: 50%;
+                        top:50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    .banners{
+                        width: 100%;
+                        filter: blur(2px);
+                        opacity: 0.8;
+                        
+                    }
+                    .logo{
+                        width: 75%;
+                    }
+                    #sogoLogo{
+                        width: 100%;
+                        height: none;
+                        background-size: contain;
+                        
+                    }
+                    @media (min-width:1600px) {
+                        #shangrilaLogo{
+                            height: 80%;
+                            width: 65%;
+                        }
+                        #okadaLogo{
+                            width: 65%;
+                        }
+                        #sogoLogo{
+                            height:100%;
+                            width: 80%;
+                        }
+                        .banners{
+                            width: 80%;
+                        }
+                    }
+                    
+                }
+                .container{
+                    width: 26%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    .dates{
+                        font-size: 0.7rem;
+                    }
+                    .to{
+                        font-size: 0.6rem;
+                        text-decoration: none;
+                    }
+                    .cardLabel{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.emptyTickets{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-60%);
+    img{
+        width: 250px;
+    }
+    span{
+        font-size: 20px;
+    }
+}
+
+
+
+
+//hover pulse animation
+@keyframes shadowPulse {
+    0%{box-shadow: 0;}
+    20%{box-shadow: 0 0 10px 0px rgba($color:$mainColor, $alpha: 1)}
+    100%{box-shadow: 0;}
+}

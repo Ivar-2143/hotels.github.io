@@ -1,0 +1,223 @@
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content #headerLabel {
+  width: 80%;
+  border-bottom: 2px solid rgba(33, 33, 33, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 25px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content #headerLabel span {
+  width: 26%;
+  margin: 15px 25px;
+  text-align: center;
+}
+
+#content #headerLabel #hLabel {
+  width: 20%;
+}
+
+#content .ticketList {
+  width: 80%;
+}
+
+#content .ticketList .card {
+  width: 100%;
+}
+
+#content .ticketList .card .rsrvCard {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+#content .ticketList .card .rsrvCard:hover {
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  -webkit-animation-name: shadowPulse;
+          animation-name: shadowPulse;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+#content .ticketList .card .rsrvCard div {
+  height: 100%;
+  margin: 0 2rem;
+}
+
+#content .ticketList .card .rsrvCard .hContainer {
+  height: 85%;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#content .ticketList .card .rsrvCard .hContainer img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#content .ticketList .card .rsrvCard .hContainer .banners {
+  width: 100%;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  opacity: 0.8;
+}
+
+#content .ticketList .card .rsrvCard .hContainer .logo {
+  width: 75%;
+}
+
+#content .ticketList .card .rsrvCard .hContainer #sogoLogo {
+  width: 100%;
+  height: none;
+  background-size: contain;
+}
+
+@media (min-width: 1600px) {
+  #content .ticketList .card .rsrvCard .hContainer #shangrilaLogo {
+    height: 80%;
+    width: 65%;
+  }
+  #content .ticketList .card .rsrvCard .hContainer #okadaLogo {
+    width: 65%;
+  }
+  #content .ticketList .card .rsrvCard .hContainer #sogoLogo {
+    height: 100%;
+    width: 80%;
+  }
+  #content .ticketList .card .rsrvCard .hContainer .banners {
+    width: 80%;
+  }
+}
+
+#content .ticketList .card .rsrvCard .container {
+  width: 26%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content .ticketList .card .rsrvCard .container .dates {
+  font-size: 0.7rem;
+}
+
+#content .ticketList .card .rsrvCard .container .to {
+  font-size: 0.6rem;
+  text-decoration: none;
+}
+
+#content .ticketList .card .rsrvCard .container .cardLabel {
+  font-size: 0.8rem;
+}
+
+.emptyTickets {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+}
+
+.emptyTickets img {
+  width: 250px;
+}
+
+.emptyTickets span {
+  font-size: 20px;
+}
+
+@-webkit-keyframes shadowPulse {
+  0% {
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 10px 0px gold;
+            box-shadow: 0 0 10px 0px gold;
+  }
+  100% {
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+  }
+}
+
+@keyframes shadowPulse {
+  0% {
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 10px 0px gold;
+            box-shadow: 0 0 10px 0px gold;
+  }
+  100% {
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+  }
+}
+/*# sourceMappingURL=rsrvStyle.css.map */

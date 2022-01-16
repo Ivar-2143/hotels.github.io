@@ -1,0 +1,51 @@
+$mainColor: #FFD700;
+$secondColor: #212121;
+$white: #fbfbfb;
+$fontFam: 'Comfortaa', cursive;
+$inputBd: 2px solid $secondColor;
+$hoverIBD: 2px solid $mainColor;
+$btnShadow: 1px 0 5px 0 #adadad;
+
+#content{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 700px;
+    div{
+        width: 400px;
+        height: 550px;
+        margin: 20px 1rem;
+        border-radius: 1rem;
+        background-color: $white;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            transition: ease-in-out 0.2s;
+            box-shadow: 5px 5px 15px 0px rgba($color: $secondColor, $alpha: 0.5);
+            transform: scale(1.03);
+        }
+        
+    }
+    img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .banner{
+        height: 100%;
+        filter: blur(2.5px);
+        border-radius: 1rem;
+        opacity: 0.8;
+    }
+    .logo{
+        width: 80%;
+        
+    }
+    
+}

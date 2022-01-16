@@ -1,0 +1,43 @@
+$mainColor: #FFD700;
+$secondColor: #212121;
+$white: #fbfbfb;
+$shadow: 1px 0 5px 0 #adadad;
+
+.notif{
+    position: fixed;
+    right: 2%;
+    width: 320px;
+    height: 50px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    img{
+        width:35px;
+        height: 35px;
+        margin: 0 10px;
+    }
+}
+.activeNotif{
+    animation-name: notify;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+}
+
+@keyframes notify {
+    0%{
+        bottom: -10%;
+    }
+    20%{
+        bottom: 5%;
+    }
+    85%{
+        bottom: 5%;
+        opacity: 1;
+    }
+    100%{
+        bottom: -10%;
+        opacity: 0;
+    }
+}

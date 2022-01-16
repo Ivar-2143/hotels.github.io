@@ -1,0 +1,66 @@
+.notif {
+  position: fixed;
+  right: 2%;
+  width: 320px;
+  height: 50px;
+  background-color: #fbfbfb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 0 5px 0 #adadad;
+          box-shadow: 1px 0 5px 0 #adadad;
+}
+
+.notif img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
+
+.activeNotif {
+  -webkit-animation-name: notify;
+          animation-name: notify;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes notify {
+  0% {
+    bottom: -10%;
+  }
+  20% {
+    bottom: 5%;
+  }
+  85% {
+    bottom: 5%;
+    opacity: 1;
+  }
+  100% {
+    bottom: -10%;
+    opacity: 0;
+  }
+}
+
+@keyframes notify {
+  0% {
+    bottom: -10%;
+  }
+  20% {
+    bottom: 5%;
+  }
+  85% {
+    bottom: 5%;
+    opacity: 1;
+  }
+  100% {
+    bottom: -10%;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=notifStyle.css.map */

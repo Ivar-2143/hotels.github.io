@@ -1,0 +1,11 @@
+Hotel Reservation made by Adrian Jeluz
+BSCS 111 - STI College Las Piñas
+Submitted to: Sir Nestor Pimentel
+Subject: Introduction to Computing
+
+This website was made in attempt for a challenge, hoping to be exempted in the Finals and also a review of my knowledge for me. Some sort of like practicing XD
+
+Notes: 
+ • I am not using an online Database. I am just using a local browser storage.
+ • A few link and scripts need to be loaded online, like the Font and GSAP for JS Animation. Some animations are in the CSS
+ • The QR Code is not generated, it's just a picture. I didn't implemented an api to generate since I think I lack time XD

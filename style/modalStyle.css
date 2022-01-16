@@ -1,0 +1,583 @@
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.5);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  visibility: hidden;
+}
+
+.modalContainer .ticket {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  background-image: url("../resources/images/misc/paper receipt.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 500px;
+  height: 800px;
+  -webkit-filter: drop-shadow(10px);
+          filter: drop-shadow(10px);
+}
+
+@media (max-width: 1366px) {
+  .modalContainer .ticket {
+    height: 500px;
+    width: 312.50px;
+  }
+}
+
+.modalContainer .ticketContent {
+  height: 70%;
+  width: 80%;
+}
+
+.modalContainer .ticketContent .modalHeader > img {
+  display: inline-block;
+  height: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.modalContainer .ticketContent .modalContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0;
+}
+
+.modalContainer .ticketContent .modalContent .tContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalContainer .ticketContent .modalContent .tContent .cLabel {
+  font-size: 20px;
+}
+
+.modalContainer .ticketContent .modalContent .tContent .cValue {
+  font-size: 18px;
+}
+
+.modalContainer .ticketContent .modalContent .tContent .cDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalContainer .ticketContent .modalContent .tContent .cDate #dateIn, .modalContainer .ticketContent .modalContent .tContent .cDate #dateOut {
+  font-size: 10px;
+}
+
+.modalContainer .ticketContent .modalContent .tContent .cDate .to {
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+@media (max-width: 1366px) {
+  .modalContainer .ticketContent .modalContent .tContent .cLabel {
+    font-size: 16px;
+  }
+  .modalContainer .ticketContent .modalContent .tContent .cValue {
+    font-size: 14px;
+  }
+  .modalContainer .ticketContent .modalContent .tContent .cDate {
+    font-size: 12px;
+  }
+  .modalContainer .ticketContent .modalContent .tContent .cDate .to {
+    font-size: 10px;
+  }
+}
+
+.modalContainer .ticketContent .modalFooter {
+  width: 96%;
+  height: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: 15px 0;
+  border-top: 2px solid rgba(33, 33, 33, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modalContainer .ticketContent .modalFooter .tNote {
+  font-size: 12px;
+  color: #525252;
+}
+
+.modalContainer .ticketContent .modalFooter img {
+  margin: 10px 0;
+  width: 115px;
+}
+
+@media (max-width: 1366px) {
+  .modalContainer .ticketContent .modalFooter .tNote {
+    font-size: 8px;
+  }
+  .modalContainer .ticketContent .modalFooter img {
+    width: 60px;
+  }
+}
+
+.modalContainer .ticketContent #receipt {
+  -webkit-filter: drop-shadow(5px 2px 5px #616161);
+          filter: drop-shadow(5px 2px 5px #616161);
+}
+
+.modalContainer .loginModal {
+  width: 400px;
+  height: 450px;
+  background-color: #fbfbfb;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  position: absolute;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.modalContainer .loginModal .modalHeader {
+  width: 100%;
+  height: 80px;
+}
+
+.modalContainer .loginModal .modalHeader .modalTabs {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #212121;
+}
+
+.modalContainer .loginModal .modalHeader .modalTabs div {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modalContainer .loginModal .modalHeader .modalTabs div span {
+  color: #fbfbfb;
+  z-index: 1;
+}
+
+.modalContainer .loginModal .modalHeader .modalTabs .active span {
+  color: #212121;
+}
+
+.modalContainer .loginModal .modalHeader .modalTabs .activeTab {
+  position: absolute;
+  background-color: #FFD700;
+  z-index: 1;
+}
+
+.modalContainer .loginModal .modalContent {
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+}
+
+.modalContainer .loginModal .modalContent .logContent {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 80%;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms #logError {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  color: #fc0000;
+  width: 90%;
+  text-align: center;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: block;
+  margin-top: 30px;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms input {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #212121;
+  font-size: 1rem;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms input:hover {
+  border: 2px solid #FFD700;
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms button {
+  display: block;
+  margin: 50px 0;
+  padding: 15px;
+  width: 50%;
+  border-radius: 20rem;
+  background-color: #FFD700;
+  border: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.modalContainer .loginModal .modalContent .logContent .forms button:hover {
+  -webkit-box-shadow: 1px 0 5px 0 #adadad;
+          box-shadow: 1px 0 5px 0 #adadad;
+}
+
+.modalContainer .loginModal .modalContent .regContent {
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  position: absolute;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms #regError {
+  position: absolute;
+  color: #fc0000;
+  width: 90%;
+  bottom: 20px;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms label {
+  margin-top: 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #212121;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms input:hover {
+  border: 2px solid #FFD700;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: 0;
+  border-radius: 50%;
+  background-color: #FFD700;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms button img {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modalContainer .loginModal .modalContent .regContent .forms button:hover {
+  -webkit-box-shadow: 1px 0 5px 0 #adadad;
+          box-shadow: 1px 0 5px 0 #adadad;
+}
+
+.modalContainer .rsrvModal {
+  width: 400px;
+  height: 450px;
+  background-color: #fbfbfb;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  position: absolute;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.modalContainer .rsrvModal .rsrvContent {
+  width: 100%;
+  height: 100%;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalHeader {
+  width: 100%;
+  height: 70px;
+  background-color: #FFD700;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalHeader .rsrvTitle {
+  font-size: 1.5rem;
+  color: #212121;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 380px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form div {
+  margin: 10px 0;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .fName, .modalContainer .rsrvModal .rsrvContent .modalContent form .lName {
+  width: 100%;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .fName input, .modalContainer .rsrvModal .rsrvContent .modalContent form .fName label, .modalContainer .rsrvModal .rsrvContent .modalContent form .lName input, .modalContainer .rsrvModal .rsrvContent .modalContent form .lName label {
+  width: 60%;
+  margin: 0 10px;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .fName input, .modalContainer .rsrvModal .rsrvContent .modalContent form .lName input {
+  padding: 3px;
+  border: 2px solid #212121;
+  border-radius: 5px;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .fName input:hover, .modalContainer .rsrvModal .rsrvContent .modalContent form .lName input:hover {
+  border: 2px solid #FFD700;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .guests {
+  width: 100%;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .guests input {
+  width: 28%;
+  border: 2px solid #212121;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .guests input:hover {
+  border: 2px solid #FFD700;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .guests label {
+  font-size: 0.8rem;
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .checkIn, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkOut {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .checkIn label, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkOut label {
+  width: 40%;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .checkIn input, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkOut input {
+  width: 45%;
+  border: 2px solid #212121;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .checkIn input:hover, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkOut input:hover {
+  border: 2px solid #FFD700;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .checkIn input, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkIn label, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkOut input, .modalContainer .rsrvModal .rsrvContent .modalContent form .checkOut label {
+  margin: 0 12px;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .roomRate {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent form .roomRate span {
+  width: 40%;
+  margin: 0 12px;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  border-radius: 50%;
+  background-color: #FFD700;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin: 0 25px;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent button img {
+  width: 40px;
+  height: 40px;
+  top: 13%;
+  left: 15%;
+}
+
+.modalContainer .rsrvModal .rsrvContent .modalContent button:hover {
+  -webkit-box-shadow: 1px 0 5px 0 #adadad;
+          box-shadow: 1px 0 5px 0 #adadad;
+}
+/*# sourceMappingURL=modalStyle.css.map */

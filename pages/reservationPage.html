@@ -1,0 +1,138 @@
+<html>
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/navStyle.css">
+    <link rel="stylesheet" href="../style/rsrvStyle.css">
+    <link rel="stylesheet" href="../style/modalStyle.css">
+    
+    <title>Hotels</title>
+</head>
+<body onload="initialize(2)">
+    <nav>
+        <div id="title">
+            <img src="../resources/images/logos/hotel-bed.png" id="logo" alt="" width="50px" height="50px"/>
+            <span>
+                Hotels
+            </span>
+        </div>
+        <div id="navs">
+            <span id="homeContainer" >
+               <a href="../index.html">Home</a>
+            </span>
+            <span id="resrvContainer" class="active">
+                <a href="../pages/reservationPage.html">Reservations</a>
+            </span>
+            <div id="user" onclick="checkLog(this,2)">
+                <span id="nameHere">
+                    Login or Register
+                </span>
+                <div id="userLog">
+                    <img src="../resources/images/icons/user_outline.png" id='userIMG' alt="">
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <section id="content">
+        <div id="headerLabel">
+            <span class="labels" id="hLabel">Hotel Name</span>
+            <span class="labels">Date</span>
+            <span class="labels">Guests</span>
+            <span class="labels">Amount</span>
+        </div>
+        <div class="ticketList" id="ticketList">
+        </div>
+    </section>
+    <div class="emptyTickets" id="emptyTickets">
+        <img src="../resources/images/misc/money.png" alt="">
+        <span id="emptyMSG">List is Empty!</span>
+    </div>
+    <div class="modalContainer" id="modal" >
+        <div class="ticket">
+            
+            <div class="ticketContent">
+                <div class="modalHeader">
+                    <img src="../resources/images/logos/okada_logo.png" alt="" id="ticketBanner">
+                </div>
+                <div class="modalContent">
+                    <span class="tContent">
+                        <span class="cLabel">Ticket ID</span><span class="cValue" id="ticketID">800012354</span>
+                    </span>
+                    <span class="tContent">
+                        <span class="cLabel">Date</span><span class="cValue cDate"><span id='dateIn'>01-21-2022</span><span class="to">to</span><span id="dateOut">01-24-2022</span></span>
+                    </span>
+                    <span class="tContent">
+                        <span class="cLabel">Name</span><span class="cValue" id='ticketName'>Adrian Jeluz</span>
+                    </span>
+                    <span class="tContent">
+                        <span class="cLabel">Expected Guests</span><span class="cValue" id='ticketGuests'>5</span>
+                    </span>
+                    <span class="tContent">
+                        <span class="cLabel">Room No.</span><span class="cValue" id='ticketRoom'>VP 315</span>
+                    </span>
+                    <span class="tContent">
+                        <span class="cLabel">Amount Due</span><span class="cValue" id='ticketAmount'>Php 25,000</span>
+                    </span>
+                </div>
+                <div class="modalFooter">
+                    <span class="tNote">Please show this screen to the cashier for verification</span>
+                    <img src="../resources/images/misc/sample_qr_212121.png" alt="" class="tQR">
+                </div>
+            </div>
+        </div>
+        <div class="loginModal">
+            <div class="modalHeader">
+                <div class="modalTabs">
+                    <div class="active" id="logTab" onclick="switchTab(this)">
+                        <span>Login</span>
+                    </div>
+                    <div class="activeTab"></div>
+                    <div  id="regTab" onclick="switchTab(this)">
+                        <span>Register</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modalContent">
+                <div class="logContent">
+                    <div class="forms">
+                        <span id="logError"></span>
+                        <form id="logIn" action="../index.html">
+                            <label for="username" >Username</label>
+                            <input type="text" name="username" id='logUsername' >
+                            <label for="passoword" >Password</label>
+                            <input type="password" name="password" id="logPassword">
+                        </form>
+                        <button onclick="logInUser()">Login</button>
+                    </div>
+                </div>
+                <div class="regContent">
+                    <div class="forms">
+                        
+                        <form id="register" action="../index.html">
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="regName">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="regUName">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="regPass">
+                            <label for="cPass">Confirm Password</label>
+                            <input type="password" name="cpass" id="cPass">
+                        </form>
+                        <span id="regError" class="errorMsg"></span>
+                        <button id="registerBtn" onclick="registerUser()"><img src="../resources/images/icons/register.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../script/modalScript.js"></script>
+    <script src="../script/userLogScript.js"></script>
+    <script src="../script/checkLog.js"></script>
+    <script src="../script/ticketScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+
+<html>
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/navStyle.css">
+    <link rel="stylesheet" href="./style/mainStyle.css">
+    <link rel="stylesheet" href="./style/modalStyle.css">
+    <link rel="stylesheet" href="./style/notifStyle.css">
+    <title>Hotels</title>
+</head>
+<body onload="initialize(1)">
+    <nav>
+        <div id="title">
+            <img src="./resources/images/logos/hotel-bed.png" id="logo" alt="" width="50px" height="50px"/>
+            <span>
+                Hotels
+            </span>
+        </div>
+        <div id="navs">
+            <span id="homeContainer" class="active">
+               <a href="./index.html">Home</a>
+            </span>
+            <span id="resrvContainer" >
+                <a href="./pages/reservationPage.html">Reservations</a>
+            </span>
+            <div id="user" onclick="checkLog(this,1)">
+                <span id="nameHere">
+                    Login or Register
+                </span>
+                <div id="userLog">
+                    <img src="./resources/images/icons/user_outline.png" id='userIMG' alt="">
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    <Section id="content">
+        <div id="okadaCard" onclick="checkLog(this)">
+            <img id="okadaBanner" src="./resources/images/banners/okada_banner.jpg" alt="" class="banner">
+                
+            </img>
+            <img id="okadaLogo" src="./resources/images/logos/okada_logo.png" alt="" class="logo">
+        </div>
+        <div id="shangrilaCard" onclick="checkLog(this)">
+            <img id="shangrilaBanner" src="./resources/images/banners/shangri-la_banner.jpg" alt="" class="banner">
+                
+            </img>
+            <img id="shangrilaLogo" src="./resources/images/logos/shangri-la_logo.png" alt="" class="logo">
+        </div>
+        <div id="sogoCard" onclick="checkLog(this)">
+            <img id="sogoBanner" src="./resources/images/banners/sogo_banner.jpg" alt="" class="banner">
+                
+            </img>
+            <img id="sogoLogo" src="./resources/images/logos/Sogo-Logo.jpg" alt="" class="logo">
+        </div>
+    </Section>
+    <div class="modalContainer" id="modal">
+        <div class="loginModal">
+            <div class="modalHeader">
+                <div class="modalTabs">
+                    <div class="active" id="logTab" onclick="switchTab(this)">
+                        <span>Login</span>
+                    </div>
+                    <div class="activeTab"></div>
+                    <div  id="regTab" onclick="switchTab(this)">
+                        <span>Register</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modalContent">
+                <div class="logContent">
+                    <div class="forms">
+                        <span id="logError"></span>
+                        <form id="logIn" action="index.html">
+                            <label for="username" >Username</label>
+                            <input type="text" name="username" id='logUsername' >
+                            <label for="passowrd" >Password</label>
+                            <input type="password" name="password" id="logPassword">
+                        </form>
+                        <button onclick="logInUser()">Login</button>
+                    </div>
+                </div>
+                <div class="regContent">
+                    <div class="forms">
+                        <form action="index.html" id="register">
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="regName">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="regUName">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="regPass">
+                            <label for="cPass">Confirm Password</label>
+                            <input type="password" name="cpass" id="cPass">
+                        </form>
+                        <span id="regError" class="errorMsg"></span>
+                        <button type="submit" id="registerBtn" onclick="registerUser()"><img src="./resources/images/icons/register.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rsrvModal">
+            <div class="rsrvContent">
+                <div class="modalHeader">
+                    <span class="rsrvTitle" id="rsrvTitle">Okada Manila</span>
+                </div>
+                <div class="modalContent">
+                    <form>
+                        <div class="fName">
+                            <label for="firstName">First Name: </label>
+                            <input type="text" name="firstName" id="firstName">
+                        </div>
+                        <div class="lName">
+                            <label for="lastName">Last Name: </label>
+                            <input type="text" name="lastName" id="lastName">
+                        </div>
+                        <div class="guests">
+                            <label for="adults">Adults: </label>
+                            <input type="number" name="adults" id="adults">
+                            <label for="children">Children: </label>
+                            <input type="number" name="children" id="children">
+                        </div>
+                        <div class="checkIn">
+                            <label for="checkInPicker">Check-in Date: </label>
+                            <input type="date" name="checkInPicker" id="checkInPicker">
+                        </div>
+                        <div class="checkOut">
+                            <label for="checkOutPicker">Check-out Date: </label>
+                            <input type="date" name="checkOutPicker" id="checkOutPicker">
+                        </div>
+                        <div class="roomRate">
+                            <span>Rate per Night: </span>
+                            <span id="hotelRate">Php 5,000</span>
+                        </div>
+                    </form>
+                    <button onclick="registerTicket()">
+                        <img src="./resources/images/icons/write.png" alt="" >
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notif">
+        <img src="./resources/images/icons/check1.png" alt="">
+        <span>Successfully created a ticket!</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script/modalScript.js"></script>
+    <script src="./script/rsrvScript.js"></script>
+    <script src="./script/userLogScript.js"></script>
+    <script src="./script/checkLog.js"></script>
+</body>
+</html>
